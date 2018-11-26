@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kim's Christmas Wish List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" src="assets/style.css">
+</head>
+
+<body>
+  <div class="container-fluid header-area">
+    <h1>Kim's Christmas Wish List</h1>
+    <p> Make Kim's Christmas holiday extra special by purchasing an item from her list!</p>
+  </div>
+
+  <!-- APPAREL SECTION -->
+  <h4 class="mt-5">Apparel</h4>
+  <div id="apparel" class="card-deck"></div>
+
+  <h5 class="mt-5">Add in additional apparel items</h5>
+  <form onsubmit="app.controllers.apparelController.addApparelFromForm(event)">
+    <div class="form-group row mt-5">
+      <label for="apparelURL" class="col-2 col-form-label"> Item image URL</label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="apparelURL">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="apparelColor" class="col-2 col-form-label"> Color </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="apparelColor">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="apparelSize" class="col-2 col-form-label"> Size </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="apparelSize">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="apparelPrice" class="col-2 col-form-label"> Price </label>
+      <div class="col-10">
+        <input class="form-control" type="number" id="apparelPrice">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="apparelPurchaseURL" class="col-2 col-form-label"> Purchase URL </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="apparelPurchaseURL">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary col-10 offset-2">Submit</button>
+  </form>
+
+
+  <h4 class="mt-5">Books</h4>
+  <div id="books" class="card-deck"></div>
+
+  <h5>Add in additional Books</h5>
+  <form class="mt-5" onsubmit="app.controllers.booksController.addBooksFromForm(event)">
+    <div class="form-group row">
+      <label for="booksImgURL" class="col-2 col-form-label"> Image URL </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="booksImgURL">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="booksTitle" class="col-2 col-form-label"> Title</label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="booksTitle">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="booksAuthor" class="col-2 col-form-label"> Author</label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="booksAuthor">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="booksPrice" class="col-2 col-form-label"> Price</label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="booksPrice">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="booksPurchaseURL" class="col-2 col-form-label"> Purchase URL</label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="booksPurchaseURL">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary col-10 offset-2">Submit</button>
+  </form>
+
+
+
+  <h4 class="mt-5">Electronics</h4>
+  <div id="electronics" class="card-deck"></div>
+
+  <h5 class="mt-5">Add in additional Electronics items</h5>
+  <form class="mt-5" onsubmit="app.controllers.electronicsController.addItemFromForm(event)">
+    <div class="form-group row">
+      <label for="electronicsBrand" class="col-2 col-form-label"> Brand </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="electronicsBrand">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="electronicsName" class="col-2 col-form-label"> Item Name </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="electronicsName">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="electronicsImg" class="col-2 col-form-label"> Image URL </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="electronicsImg">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="electronicsPrice" class="col-2 col-form-label"> Price </label>
+      <div class="col-10">
+        <input class="form-control" type="number" id="electronicsPrice">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="electronicsPurchaseURL" class="col-2 col-form-label"> Purchase URL </label>
+      <div class="col-10">
+        <input class="form-control" type="text" id="electronicsPurchaseURL">
+      </div>
+    </div>
+    <button class="btn btn-primary col-10 offset-2" type="submit">Submit</button>
+  </form>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
